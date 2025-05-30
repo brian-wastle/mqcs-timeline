@@ -1,6 +1,14 @@
-html, body {
-  height: 100%;
-  margin: 0;
+
+
+.scroll-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background-image: url('/assets/images/starrybg.webp');
+  background-repeat: repeat;  
+  background-size: auto;
+  image-rendering: pixelated;
 }
 
 .timeline-wrapper {
@@ -53,7 +61,7 @@ html, body {
   }
 }
 
-/* -------------  PARALLAX LAYERS ------------- */
+
 .parallax-img {
   position: absolute;
   top: 0;
@@ -62,24 +70,6 @@ html, body {
   will-change: transform;
   pointer-events: none;
   user-select: none;
-  max-width: none;               
-}
-
-/* example: hero positioned behind first two events */
-.hero {
-  width: 1200px;
-  opacity: 0.35;
-}
-
-
-/* styles.scss or component-level */
-.scroll-bg {
-  position: fixed;
-  inset: 0;
-  z-index: -2;
-  pointer-events: none;
-  background-image: url('/assets/images/starrybg.webp');
-  background-repeat: repeat;  
-  background-size: auto;
-  image-rendering: pixelated;
+  max-width: none;       
+  max-height: 15rem;        
 }

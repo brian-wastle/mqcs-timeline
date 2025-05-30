@@ -1,41 +1,43 @@
-<!-- app.component.html ( or timeline.component.html ) -->
-<div
-  class="scroll-bg"
-  parallaxBg
-  [ratio]="0.2"             
-  [textureHeight]="540"     
->
-</div>
-
+<!-- timeline.component.html -->
+<div class="scroll-bg"
+     parallaxBg
+     [ratio]="0.2"
+     [textureHeight]="540"></div>
 
 <section class="timeline-wrapper">
 
-  
-  <!-- Parallax illustrations -->
-  <img
-    class="parallax-img hero"
-    appParallax
-    [ratio]="1.35"          
-    src="assets/intro-art.webp"
-    alt=""
-  />
+  <!-- Single *ngFor drives both events *and* screenshots -->
+  <ng-container *ngFor="let item of items; let i = index">
 
-  <!-- timeline track and events -->
-  <div class="track">
-    <div *ngFor="let ev of events" class="event">
-      <span class="dot"></span>
-      <div class="card">
-        <h3>{{ ev.year }}</h3>
-        <p>{{ ev.text }}</p>
-        <img
-          *ngIf="ev.image"
-          [src]="ev.image"
-          loading="lazy"
-          appParallax
-          [ratio]="1.15" 
-        />
+    <!-- Spacer div provides the gap for both types -->
+    <div class="spacer" [style.height.px]="item.gap ?? 48"></div>
+
+    <!-- Event card ----------------------------------------------------- -->
+    <ng-container *ngIf="item.type === 'event' && item.year">
+      <div class="event">
+        <span class="dot"></span>
+        <div class="card">
+          <h3>{{ item.year }}</h3>
+          <p>{{ item.text }}</p>
+        </div>
       </div>
-    </div>
-  </div>
+    </ng-container>
 
+    <!-- Screenshot ----------------------------------------------------- -->
+    <ng-container *ngIf="item.type === 'image' && item.src">
+      <img
+        class="screenshot"
+        [class.left]="item.side === 'left'"
+        [class.right]="item.side === 'right'"
+        [class.center]="item.side === 'center'"
+        [style.width.px]="item.width ?? 320"
+        [style.top.px]="0"
+        appParallax
+        [ratio]="1.15"
+        [src]="item.src"
+        alt=""
+      />
+    </ng-container>
+
+  </ng-container>
 </section>

@@ -1,0 +1,41 @@
+<!-- app.component.html ( or timeline.component.html ) -->
+<div
+  class="scroll-bg"
+  parallaxBg
+  [ratio]="0.2"             
+  [textureHeight]="540"     
+>
+</div>
+
+
+<section class="timeline-wrapper">
+
+  
+  <!-- Parallax illustrations -->
+  <img
+    class="parallax-img hero"
+    appParallax
+    [ratio]="1.35"          
+    src="assets/intro-art.webp"
+    alt=""
+  />
+
+  <!-- timeline track and events -->
+  <div class="track">
+    <div *ngFor="let ev of events" class="event">
+      <span class="dot"></span>
+      <div class="card">
+        <h3>{{ ev.year }}</h3>
+        <p>{{ ev.text }}</p>
+        <img
+          *ngIf="ev.image"
+          [src]="ev.image"
+          loading="lazy"
+          appParallax
+          [ratio]="1.15" 
+        />
+      </div>
+    </div>
+  </div>
+
+</section>

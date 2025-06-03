@@ -8,14 +8,19 @@
 
   <!-- Single *ngFor drives both events *and* screenshots -->
   <ng-container *ngFor="let item of items; let i = index">
-
+    <div class="vertical-line"></div>
+    <div class="vertical-line-wide"></div>
     <!-- Spacer div provides the gap for both types -->
     <div class="spacer" [style.height.px]="item.gap ?? 48"></div>
 
     <!-- Event card ----------------------------------------------------- -->
     <ng-container *ngIf="item.type === 'event' && item.year">
-      <div class="event">
+      <div class="event" [ngClass]="{ 'event-left': i % 2 === 0, 'event-right': i % 2 !== 0}">
+        <div class="timeline-arm" [ngClass]="{ 'event-left': i % 2 === 0, 'event-right': i % 2 !== 0}">
+          <img  [src]="i % 2 === 0 ? 'assets/images/arm.webp' : 'assets/images/arm2.webp'">
+        </div>
         <span class="dot"></span>
+        <span class="dot-center"></span>
         <div class="card">
           <h3>{{ item.year }} - {{ item.title }}</h3>
           <p>{{ item.text }}</p>
@@ -33,7 +38,7 @@
         [style.width.px]="item.width ?? 320"
         [style.top.px]="0"
         appParallax
-        [ratio]="1.15"
+        [ratio]="1.2"
         [src]="item.src"
         alt=""
       />

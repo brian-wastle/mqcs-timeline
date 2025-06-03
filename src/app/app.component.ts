@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { HostListener, Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 
@@ -10,4 +10,10 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'MQCS - Peer into the Future';
+  imageScale = 1;
+  maxScroll = 300;
+  minScale = 0.8;
+
+  @HostListener('window:scroll', [])
+    onWindowScroll() {}
 }

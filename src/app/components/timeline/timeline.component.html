@@ -1,22 +1,15 @@
-<!-- timeline.component.html -->
-<div class="scroll-bg"
-     parallaxBg
-     [ratio]="0.2"
-     [textureHeight]="540"></div>
-
 <section class="timeline-wrapper">
 
-  <!-- Single *ngFor drives both events *and* screenshots -->
   <ng-container *ngFor="let item of items; let i = index">
     <div class="vertical-line"></div>
     <div class="vertical-line-wide"></div>
-    <!-- Spacer div provides the gap for both types -->
+
     <div class="spacer" [style.height.px]="item.gap ?? 48"></div>
 
-    <!-- Event card ----------------------------------------------------- -->
+    <!-- Event Card ----------------- -->
     <ng-container *ngIf="item.type === 'event' && item.year">
       <div class="event" [ngClass]="{ 'event-left': i % 2 === 0, 'event-right': i % 2 !== 0}">
-        <div class="timeline-arm" [ngClass]="{ 'event-left': i % 2 === 0, 'event-right': i % 2 !== 0}">
+        <div class="timeline-arm">
           <img  [src]="i % 2 === 0 ? 'assets/images/arm.webp' : 'assets/images/arm2.webp'">
         </div>
         <span class="dot"></span>
@@ -28,7 +21,8 @@
       </div>
     </ng-container>
 
-    <!-- Screenshot ----------------------------------------------------- -->
+    <!-- Midground Parallax Image ----------------- -->
+     <!-- (type: 'image', side: string, src: asset src loc)-->
     <ng-container *ngIf="item.type === 'image' && item.src">
       <img
         class="screenshot"
@@ -43,6 +37,5 @@
         alt=""
       />
     </ng-container>
-
   </ng-container>
 </section>

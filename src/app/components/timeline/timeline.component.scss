@@ -1,16 +1,3 @@
-
-
-.scroll-bg {
-  position: fixed;
-  inset: 0;
-  z-index: -3;
-  pointer-events: none;
-  background-image: url('/assets/images/starrybg.webp');
-  background-repeat: repeat;  
-  background-size: 960px 1080px;
-  image-rendering: pixelated;
-}
-
 .timeline-wrapper {
   position: relative;
   width: min(720px, 90vw);

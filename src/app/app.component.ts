@@ -1,19 +1,18 @@
-import { HostListener, Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-
+import { ParallaxBgDirective } from '../app/directives/parallax-bg/parallax-bg.directive';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, ParallaxBgDirective],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   title = 'MQCS - Peer into the Future';
-  imageScale = 1;
-  maxScroll = 300;
-  minScale = 0.8;
-
+  scrolled = false;
   @HostListener('window:scroll', [])
-    onWindowScroll() {}
+  onWindowScroll() {
+    this.scrolled = window.scrollY > 10;
+  }
 }

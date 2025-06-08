@@ -2,7 +2,6 @@
 import { Component } from '@angular/core';
 import { CommonModule }       from '@angular/common';
 import { ParallaxDirective }  from '../../directives/parallax/parallax.directive';
-import { ParallaxBgDirective } from '../../directives/parallax-bg/parallax-bg.directive';
 
 type Side = 'left' | 'right' | 'center';
 
@@ -33,7 +32,7 @@ type TimelineItem = TimelineEvent | TimelineImage | TimelineSpacer;
 @Component({
   selector: 'app-timeline',
   standalone: true,
-  imports: [CommonModule, ParallaxDirective, ParallaxBgDirective],
+  imports: [CommonModule, ParallaxDirective, ],
   templateUrl: './timeline.component.html',
   styleUrls: ['./timeline.component.scss'],
 })
@@ -51,14 +50,14 @@ export class TimelineComponent {
       type: 'event',
       year: 2171,
       title: 'First Contact and Interstellar Data Exchange',
-      text: 'Humanity initiates the first exchange of information with advanced extraterrestrial civilizations at the CETI Institute, significantly accelerating technological progress on Earth. Although these civilizations expressed concern that further contact could attract unwanted attention to our Solar System, they could not dampen the greatest minds of a generation from pressing forward in the crusade for space colonization.',
+      text: 'Humanity initiates the first exchange of information with an advanced extraterrestrial civilization at the CETI Institute, significantly accelerating scientific, medical and technological innovation on Earth. Although these docile beings expressed concern that further attempts at contact could attract unwanted attention to our Solar System, they could not dampen the greatest minds of a generation from pressing forward in the crusade for deep space colonization.',
       gap: 200
     },
     {
       type: 'event',
       year: 2174,
       title: 'Initial Government-Backed Colonization Efforts',
-      text: 'Major global powers, including the United States, China, the European Union, Japan, and India, launch colonization missions beyond Earth, establishing sustainable settlements on Venus and Mars.',
+      text: `One prominent news outlet describes the changing technological landscape as if "blockbuster movies came to life" and "surpassing the limits of the modern human imagination". Major global powers, including the United States, China, the European Union, Japan, and India, launch colonization missions beyond Earth, establishing sustainable settlements on Venus and Mars. A small contingent of the world's leading astronauts and thought-leaders lead the resettlement effort. Additionally, 3% of Earth's population is redistributed, in order of GDP per country, beginning from lowest to highest.`,
       gap: 200
     },
     {
@@ -86,7 +85,7 @@ export class TimelineComponent {
       type: 'event',
       year: 2180,
       title: 'Contact with Less Advanced Civilizations',
-      text: `The Perdix spacecraft is destroyed during an unexpected encounter with a hostile extraterrestrial civilization. The waking crew members are integrated into alien society, while the remaining cryosleep population are obliterated by RKV harpoons.`,
+      text: `The Perdix spacecraft is destroyed during an unexpected encounter with a hostile extraterrestrial carrier. The waking crew members are integrated into alien society, while the remaining cryosleep population are obliterated by RKV harpoons.`,
       gap: 200
     },
     {
@@ -107,7 +106,7 @@ export class TimelineComponent {
       type: 'event',
       year: 2186,
       title: 'Extended Colonization Achievements',
-      text: `Successful colonization programs led by private special interest groups result in permanent human settlements on Saturn's moons. Moon settlements serve as international resupply stations. Ports are built on Titan, Phobos, Europa and Ganymede.`,
+      text: `Successful colonization programs led by private special interest groups result in permanent human settlements on Saturn's moons. Moon settlements around Saturn begin as international resupply stations and grow into flourishing port megacities. Ports are built on Titan, Phobos, Europa and Ganymede. Saturn is colloquially referred to as the "New West".`,
       gap: 200
     },
     {
@@ -128,21 +127,21 @@ export class TimelineComponent {
       type: 'event',
       year: 2199,
       title: `Interplanetary Missile Attacks and Security Measures`,
-      text: `Widespread civil unrest, culminating in three devastating terrorist attacks on Beaufort (formerly Venus) prompt an emergency closure of all planetary borders within the Solar System for one full year, emphasizing the need for enhanced corporate-led security and policing.`,
+      text: `Widespread civil unrest, culminating in three devastating terrorist attacks on Beaufort (formerly Venus) prompt an emergency closure of all planetary borders within the Solar System for one full year, emphasizing the need for enhanced corporate-funded security and policing. Initial efforts are slow.`,
       gap: 200
     },
     {
       type: 'event',
       year: 2200,
       title: `The 23rd Century and 'The Brand New Day' Plan`,
-      text: `To commemorate the turn of the century, corporate owners of planets establish new stringent regulations governing interplanetary travel and commerce, significantly altering trade dynamics and transportation protocols across the Solar System. For the first time, android units are estimated to outnumber humans.`,
+      text: `To commemorate the turn of the century, corporate owners of planets establish new stringent regulations governing interplanetary travel and commerce, significantly altering trade dynamics and transportation protocols across the Solar System. For the first time, android units are estimated to outnumber humans, and settlements on especially uninhabitable planets consist solely of android workers collecting and processing resources.`,
       gap: 200
     },
     {
       type: 'event',
       year: 2219,
       title: `Widespread Consolidation of Shipping Carriers`,
-      text: `Economic pressures force the consolidation of 80% of the interplanetary shipping industry into two massive conglomerates, while the number of small courier enterprises (fewer than fifty employees) rapidly increases.`,
+      text: `Economic pressures force the consolidation of 80% of the interplanetary shipping industry into two massive conglomerates, while the number of small courier enterprises (fewer than twenty employees) rapidly increases.`,
       gap: 200
     },
     {
@@ -156,7 +155,7 @@ export class TimelineComponent {
       type: 'event',
       year: 2239,
       title: `Reopening of Planetary Borders with Enhanced Regulations`,
-      text: `Interplanetary borders mostly reopen under a complex system of treaties and visa regulations designed to manage the risks associated with interplanetary travel and commerce.`,
+      text: `Interplanetary borders mostly reopen under a complex system of treaties and visa regulations designed to manage the risks associated with interplanetary travel and trade.`,
       gap: 200
     },
     {

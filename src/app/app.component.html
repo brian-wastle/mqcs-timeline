@@ -1,13 +1,15 @@
-  <div class="header">
-    <img
-        class="header-logo"
-        src="assets/images/logo1.webp"
-    />
+  <header [class.visible]="scrolled" id="scroll-header">
+    <img class="header-logo" src="assets/images/fourletterlogo.webp" />
     <h2>Home</h2>
     <h2>Media</h2>
     <h2>Links</h2>
-  </div>
+  </header>
   <div class="content">
     <router-outlet>
     </router-outlet>
+  </div>
+  <div class="scroll-bg"
+     parallaxBg
+     [ratio]="0.2"
+     [textureHeight]="540">
   </div>

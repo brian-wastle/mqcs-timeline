@@ -1,6 +1,21 @@
 .img-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
+  color: #ffffff;
+}
+
+.steam-logo {
+  width: auto;
+  height: 70px;
+  margin: 20px;
+}
+
+.steam-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 

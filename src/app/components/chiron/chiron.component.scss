@@ -1,0 +1,40 @@
+.chiron-container {
+  bottom: 0;
+  width: 90%;
+  color: #dadada;
+  overflow: hidden;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  font-family: sans-serif;
+  font-size: .6rem;
+  padding: 0 1rem;
+}
+
+.chiron {
+  display: flex;
+  white-space: nowrap;
+  animation: scroll-loop linear infinite;
+  animation-duration: 35s;
+  align-items: center;
+}
+
+.chiron-text {
+  padding-right: .3rem;
+}
+
+@keyframes scroll-loop {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .chiron-container {
+    height: 32px;
+    font-size: 0.85rem;
+  }
+}

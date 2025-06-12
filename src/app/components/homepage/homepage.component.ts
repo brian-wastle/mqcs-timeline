@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LightboxModule } from 'ngx-lightbox';
 import { Lightbox } from 'ngx-lightbox';
+import { ChironComponent } from '../chiron/chiron.component';
 
 @Component({
   selector: 'app-homepage',
-  imports: [CommonModule, LightboxModule],
+  imports: [CommonModule, LightboxModule, ChironComponent],
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.scss']
 })

@@ -1,0 +1,16 @@
+<ng-container *ngIf="thumbVideo; else stillImg">
+  <video class="thumb-video"
+    disablepictureinpicture
+    [muted]="true"
+    playsinline
+    preload="metadata"
+    [src]="thumbVideo"
+    (mouseenter)="play($event)"
+    (mouseleave)="reset($event)"
+    (click)="open()">
+  </video>
+</ng-container>
+
+<ng-template #stillImg>
+  <img [src]="album[0].src" (click)="open()" />
+</ng-template>

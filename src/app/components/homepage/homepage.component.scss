@@ -1,9 +1,18 @@
-.img-container {
+.flex-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   color: #ffffff;
+}
+
+.splash-logo {
+  width: auto;
+  height: auto;
+  max-width: 100%; // prevents overflow on smaller screens
+  max-height: 100vh; // optional: constrain tall logos on very small devices
+  display: block;
+  margin: 0 auto; // optional: center the image
 }
 
 .steam-logo {
@@ -14,13 +23,31 @@
 
 .steam-box {
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(1.5rem, 2.5vw, 3rem);
+  flex-wrap: wrap;
+  text-align: center;
+
+  img.steam-logo {
+    height: 1.6em; 
+    width: auto;
+  }
+}
+
+.chiron {
+  width: 80%;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.chiron {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.screenshots {
+  width:66%;
+}
+
+@media (max-width: 768px) {
+  .screenshots {
+    width:90%
+  }
 }

@@ -1,14 +1,17 @@
 <div class="spacer" [style.height.px]="100"></div>
-<div class="img-container">
-    <img src="assets/images/logo1.webp" />
-    <h1 class ="steam-box">Coming to <span class="steam-box"><img class="steam-logo" src="assets/images/steamlogo.webp" /></span></h1>
-</div>
-<div class="spacer" [style.height.px]="60"></div>
-<app-chiron class="chiron"/>
-<div class="spacer" [style.height.px]="700"></div>
+<div class="flex-container">
+  <img class="splash-logo" src="assets/images/logo1.webp" />
+  <h2 class="steam-box">
+    <span>Coming to</span>
+    <img class="steam-logo" src="assets/images/steamlogo.webp" />
+  </h2>
+  <div class="spacer" [style.height.px]="60"></div>
 
-<div class="img-container">
-  <img [src]="albums[0].thumb" (click)="open(0)" />
-</div>
+  <app-chiron class="chiron"/>
+  <div class="spacer" [style.height.px]="100"></div>
+  <app-tictactoe class="screenshots"/>
+  <div class="spacer" [style.height.px]="30"></div>
 
-<div class="spacer" [style.height.px]="60"></div>
+  <app-lightbox [imageData]="imageData"></app-lightbox>
+  <div class="spacer" [style.height.px]="60"></div>
+</div>

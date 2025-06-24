@@ -1,10 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Lightbox } from 'ngx-lightbox';
+import { LightboxModule } from 'ngx-lightbox';
 
 @Component({
   selector: 'app-lightbox',
-  imports: [CommonModule],
+  imports: [CommonModule, LightboxModule],
   templateUrl: './lightbox.component.html',
   styleUrls: ['./lightbox.component.scss']
 })

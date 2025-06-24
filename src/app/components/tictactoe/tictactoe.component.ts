@@ -9,7 +9,6 @@ import { LightboxComponent } from '../lightbox/lightbox.component';
   styleUrls: ['./tictactoe.component.scss']
 })
 export class TictactoeComponent {
-  // one-image “album” per lightbox – now with a thumbVideo
   imageData = [
   [{ src: 'assets/images/screenshots/screenshot1.webp', caption: '', thumbVideo: 'assets/video/video1.mp4' }],
   [{ src: 'assets/images/screenshots/screenshot2.webp', caption: '', thumbVideo: 'assets/video/video3.mp4' }],

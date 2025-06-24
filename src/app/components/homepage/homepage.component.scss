@@ -42,6 +42,11 @@
   justify-content: center;
 }
 
+
+.pitch-text {
+  color:#ffffff;
+}
+
 .screenshots {
   width:66%;
 }
@@ -50,4 +55,22 @@
   .screenshots {
     width:90%
   }
+}
+
+.social-media {
+  min-width: 200px;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.social-media a+a {
+  margin-left: 0.75rem;        // gap
+  padding-left: 0.75rem;
+  border-left: 4px solid #ffffff;
+}
+
+.details-section {
+  margin-bottom:15px;
 }

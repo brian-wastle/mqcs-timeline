@@ -1,8 +1,10 @@
   <header [class.visible]="scrolled" id="scroll-header">
-    <img class="header-logo" src="assets/images/fourletterlogo.webp" />
-    <h2>Home</h2>
-    <h2>Media</h2>
-    <h2>Links</h2>
+    <a routerLink="/" class="logo-link">
+      <img src="assets/images/fourletterlogo.webp" alt="Home" class="header-logo" />
+    </a>
+    <a routerLink="/asp" routerLinkActive="active" class="tagline-link">
+      <h2 class="header-logo">Explore the ASP</h2>
+    </a>
   </header>
   <div class="content">
     <router-outlet>

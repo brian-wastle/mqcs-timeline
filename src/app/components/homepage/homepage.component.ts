@@ -4,10 +4,11 @@ import { ChironComponent } from '../chiron/chiron.component';
 import { TictactoeComponent } from '../tictactoe/tictactoe.component';
 import { LightboxComponent } from '../lightbox/lightbox.component';
 import { PitchTextComponent } from '../pitch-text/pitch-text.component';
+import { AddtlTextComponent } from '../addtl-text/addtl-text.component';
 
 @Component({
   selector: 'app-homepage',
-  imports: [CommonModule, ChironComponent, TictactoeComponent, LightboxComponent, PitchTextComponent],
+  imports: [CommonModule, ChironComponent, TictactoeComponent, LightboxComponent, PitchTextComponent, AddtlTextComponent],
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.scss']
 })

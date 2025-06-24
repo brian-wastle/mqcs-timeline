@@ -44,7 +44,25 @@
 
 
 .pitch-text {
+  font-family: "Sofia Sans";
   color:#ffffff;
+  outline: 1px solid #ffffff;
+  letter-spacing: .4px;
+  line-height: .75rem;
+  width: 75%;
+  justify-items: center;
+  padding: .5rem 0rem;
+  background-color: #08080a;
+}
+
+.addtl-text {
+  font-family: "Sofia Sans";
+  color:#ffffff;
+  outline: 1px solid #ffffff;
+  line-height: .75rem;
+  width: 75%;
+  padding: .5rem .75rem;
+  background-color: #08080a;
 }
 
 .screenshots {

@@ -5,21 +5,25 @@
     <span>Coming to</span>
     <img class="steam-logo" src="assets/images/steamlogo.webp" />
   </h2>
+
   <app-chiron class="chiron"/>
   <div class="spacer" [style.height.px]="40"></div>
+
   <app-pitch-text class="pitch-text"/>
   <div class="spacer" [style.height.px]="50"></div>
+
   <app-tictactoe class="screenshots"/>
-  <div class="spacer" [style.height.px]="150"></div>
-  <div class="pitch-text">additional text</div>
-  <div class="pitch-text">hello_____________________________________about yay wide____________________________________world</div>
-  <div class="spacer" [style.height.px]="120"></div>
+  <div class="spacer" [style.height.px]="75"></div>
+
+  <app-addtl-text class="addtl-text"></app-addtl-text>
+  <div class="spacer" [style.height.px]="80"></div>
+
   <div class="social-media">
     <a
       href="https://bsky.app/profile/edgewoodgames.bsky.social"
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Follow me on Bluesky"
+      aria-label="Follow Edgewood Games on Bluesky"
     >
       <img src="assets/images/blueskylogo.webp" alt="Blueksy logo" />
     </a>
@@ -27,12 +31,13 @@
       href="https://x.com/EdgewoodGames"
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Follow me on X.com"
+      aria-label="Follow Edgewood Games on X.com"
     >
       <img src="assets/images/xlogo.webp" alt="X.com logo" />
     </a>
   </div>
-  <div class="spacer" [style.height.px]="100"></div>
+  <div class="spacer" [style.height.px]="20"></div>
+
   <h3 class="details-section">More Info:</h3>
   <app-lightbox [imageData]="imageData"></app-lightbox>
   <div class="spacer" [style.height.px]="60"></div>

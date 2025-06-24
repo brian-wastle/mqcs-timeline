@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Lightbox } from 'ngx-lightbox';
 import { LightboxModule } from 'ngx-lightbox';
 
+
 @Component({
   selector: 'app-lightbox',
   imports: [CommonModule, LightboxModule],
